@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js原生DOM选择器</title>
+</head>
+<body>
+ <p id="a">aaa</p>
+ <script>
+    var a = document.querySelector('p');
+    var c = document.querySelector('#a');
+    var b = document.querySelectorAll('p')[0];
+    a.style.color="red";
+    b.style.color="blue";
+    console.log(a.nodeType);
+    console.log(c.nodeType);
+
+    // 新增节点
+     var h = document.createElement('h1');
+     h.innerText='aaaa';
+     a.appendChild(h);
+     console.log(h.parentElement);
+</script>
+</body>
+</html>

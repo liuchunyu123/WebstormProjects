@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面试1</title>
+</head>
+<body>
+<script>
+    var str = "q",num = 2,T = true,nu,ob={},ar=[],fu=function(){};
+    console.log(typeof str);  //string
+    console.log(typeof num);  //number
+    console.log(typeof T);    //boolean
+    console.log(typeof nu);   //undefined
+    console.log(typeof ob);   //object
+    console.log(typeof ar);   //object
+    console.log(typeof strstrstr);  //undefined
+    console.log(typeof fu);   //function
+    console.log(typeof null);   //object
+    console.log(ar instanceof Array);   //true
+
+    function Foo(name){
+        this.name = name;
+    }
+    var foo = new Foo('bar');
+    console.log(foo instanceof Foo);
+
+    //值类型和引用类型
+    function fo(a){
+        a = a * 10;
+    }
+    function ba(b) {
+        b.val = 'new' ;
+    }
+    var a = 1;
+    var b = {val : 'w'};
+
+    console.log(a);
+    console.log(b);
+</script>
+</body>
+</html>

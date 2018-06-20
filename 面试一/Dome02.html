@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>值类型 vs 引用类型</title>
+</head>
+<body>
+<script>
+    function foo(a){
+        a = a * 10;
+    }
+    function bar(b){
+        b.value = 'new';
+    }
+    var a = 1;
+    var b = {value: 'old'};
+    foo(a);
+    bar(b);
+    console.log(a); //1
+    console.log(b);
+
+    // function foo(){
+    //     a = a * 10;
+    // }
+    // function bar(b){
+    //     b.value = 'new';
+    // }
+    // var a = 1;
+    // var b = {value: 'old'};
+    // foo(a);
+    // bar(b);
+    // console.log(a); // 10
+    // console.log(b);
+
+
+    //上面的方法设有形参变量，方法内部的代码执行操作的是这个形参。而下面的方法，没有设形参，也没有var一个a，
+    // 所以在函数内部操作a的时候会从当前方法的上一作用域找这个a，然后就找window下的a了，之后的操作都是对全局下的a进行的操作，
+    // 所以两次的结果不一样。
+
+    //方法一相当于下面
+    // function foo(c){
+    //     c = c * 10;
+    // }
+    // function bar(b){
+    //     b.value = 'new';
+    // }
+    // var a = 1;
+    // var b = {value: 'old'};
+    // foo(a);
+    // bar(b);
+    // console.log(a); //1
+    // console.log(b);
+
+    // 首先a是一个基本数据类型的值，因此以参数的形式传入a时，就相当于把a的值拷贝了一份，赋值给foo函数体内的局部变量a，
+    // 因此在函数体内对局部变量的操作，不会影响到外部的全局变量a。
+    var number = new Number(2);
+    console.log(number);
+
+</script>
+</body>
+</html>

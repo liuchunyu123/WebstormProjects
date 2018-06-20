@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css学习</title>
+    <style>
+        .son-1,.son-2,.son-3{
+            height: 100px;
+            border: 1px solid black;
+        }
+        .father>.son-1{
+            background: antiquewhite;
+
+        }
+        :checked{
+            background: red;
+        }
+        [class|="ls"]{
+            color: aqua;
+        }
+        [class$="5"]{
+            font-size: larger;
+        }
+        li:nth-last-child(2){
+            margin-left: 100px;
+        }
+        ul li:nth-child(4){
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son-1">1111
+            <div class="son-1" style="border: 1px solid red">2222</div>
+        </div>
+        <div class="son-2"></div>
+        <div class="son-3"></div>
+        <ul class="navigation">
+            <li class="ls-1">apple</li>
+            <li class="ls-2">banana</li>
+            <li class="ls-3">orange</li>
+            <li class="ls-4">lemon</li>
+            <li class="ls-5">pear</li>
+        </ul>
+        <form action="">
+            <input type="radio" checked="checked" name="number"/>one <br>
+            <input type="radio" name="number"/>two <br>
+            <input type="radio" />three <br>
+            <input type="checkbox" checked />A <br>
+            <input type="checkbox" checked />B <br>
+        </form>
+    </div>
+</body>
+</html>
